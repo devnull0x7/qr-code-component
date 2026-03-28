@@ -4,6 +4,18 @@
     --slate-500: hsl(216, 15%, 48%);
     --slate-900: hsl(218, 44%, 22%);
     --outfit: "Outfit", sans-serif;
+
+    --shadow: 0px 4px 8px 2px rgba(174, 188, 185, 0.63);/*(inset), offset-x, offset-y, blur-radius, spread-radius color-value*/
+
+    /* 
+    offset-x means that the how much x-axsis or horizontal the shadow go if 4px then it will go 4px to positive x whereas -4px would go negative 4px.
+
+    blur is just bluring the shadow if no blur is added the shadow is sharp.
+
+    spread-radius meaning how far the shadow be away from the container.
+
+    inset is to make the shadows come on top of the container then in the bottom which make it feel like the card is pressed on the page.
+    */
 }
 
 * {
@@ -50,19 +62,8 @@ body {
 }
 
 .card:hover {
-    box-shadow:0px 4px 8px 2px rgba(174, 188, 185, 0.63); /*(inset), offset-x, offset-y, blur-radius, spread-radius color-value*/
+    box-shadow: var(--shadow);
 }
-
-/* 
-
-offset-x means that the how much x-axsis or horizontal the shadow go if 4px then it will go 4px to positive x whereas -4px would go negative 4px.
-
-blur is just bluring the shadow if no blur is added the shadow is sharp.
-
-spread-radius meaning how far the shadow be away from the container.
-
-inset is to make the shadows come on top of the container then in the bottom which make it feel like the card is pressed on the page.
-*/
 
 .card-content {
     padding: 1rem;
@@ -71,7 +72,7 @@ inset is to make the shadows come on top of the container then in the bottom whi
     gap: 1rem;
 }
 
-img {
+.card img {
     width: 100%;
     border-radius: 0.5rem;
 }
