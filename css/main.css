@@ -41,7 +41,7 @@ body {
     font-family: var(--outfit);
 }
 
-.wrapper {
+main {
     display: grid;
     grid-template-rows: 100vh;
     align-items: center;
